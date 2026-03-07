@@ -1,0 +1,35 @@
+title: My Blog
+description: A responsive blog built with Jekyll
+author: Blog Author
+url: ""
+baseurl: ""
+
+permalink: /:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - theme.gemspec
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

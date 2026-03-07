@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenant Tracker | My Blog</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="My Blog" />
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tenant Tracker | My Blog</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Tenant Tracker" />
+<meta name="author" content="Blog Author" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A responsive blog built with Jekyll" />
+<meta property="og:description" content="A responsive blog built with Jekyll" />
+<link rel="canonical" href="http://localhost:4000/tenant-tracker/" />
+<meta property="og:url" content="http://localhost:4000/tenant-tracker/" />
+<meta property="og:site_name" content="My Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tenant Tracker" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Blog Author"},"description":"A responsive blog built with Jekyll","headline":"Tenant Tracker","url":"http://localhost:4000/tenant-tracker/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="site-logo">My Blog</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      
+        
+      
+        
+          <li><a href="/tenant-tracker/">Tenant Tracker</a></li>
+        
+      
+        
+      
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  });
+</script>
+
+
+  <main class="site-content">
+    <article class="page">
+  <h1 class="page-title">Tenant Tracker</h1>
+  <div class="page-content">
+    <div class="container">
+    <div class="row pt-3">
+        <div class="col-12 pb-3">
+            <form onsubmit="checkTenant(); return false;">
+                <div class="input-group row">
+                    <input class="form-control col-md-8" type="text" placeholder="Tenant Name: tenant.onmicrosoft.com" name="tenantName" id="tenantName" />
+                    <input type="submit" class="btn btn-primary col-md-2" value="Check Tenant">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row pb-3" id="result_container">
+        <div class="col-8" id="results" style="display:none;"></div>
+        <div class="col-4" id="domains" style="display:none;"></div>
+    </div>
+</div>
+
+<script type="text/x-handlebars-template" id="results-display">
+    <div class="row">
+        <div class="col-4">Tenant ID:</div>
+        <div class="col-8">{{tenantId token_endpoint }}</div>
+    </div>
+    <div class="row">
+        <div class="col-4">Tenant Location:</div>
+        <div class="col-8">{{tenantLocation tenant_region_scope }}</div>
+    </div>
+    <div class="row">
+        <div class="col-4">B2B Availability:</div>
+        <div class="col-8">{{tenantB2BAvailable tenant_region_scope }}</div>
+    </div>
+    <div class="row">
+        <div class="col-4">Tenant Region:</div>
+        <div class="col-8">{{tenantRegion tenant_region_scope tenant_region_sub_scope }}</div>
+    </div>
+    <div class="row">
+        <div class="col-4">Tenant Whitelisted:</div>
+        <div class="col-8">{{tenantWhiteListed cloud_instance_name tenant_region_scope}}</div>  
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">
+                <div class="row">
+                    <div class="col-10">Raw Results</div>
+                    <div class="col-2">
+                        <span class="btn btn-primary btn-sm " data-toggle="button" aria-pressed="false" id="showHide" value="Toggle" onclick="toggleResult(); return false;">Toggle</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-text" style="display:none;" id="result">
+                <div >{{stringify this }}</div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-handlebars-template" id="results-error">
+    {{#if invalidTenant}}
+    <div class="row">
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-10"><b>The tenant or domain name does not appear to be in use or registered in Azure AD.</b><br/>You can expand the results to see more details.</div>
+    </div>
+    {{/if}}
+    {{#if error}}
+    <div class="row">
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-10" ><b>An Error <i>{{ error }}</i> occured, expand the results to see details.</b></div>
+        <div class="col-md-1">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-10" >{{ errorDescription }}</div>
+        <div class="col-md-1">&nbsp;</div>
+    </div>
+    {{/if}}
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">
+                <div class="row">
+                    <div class="col-md-11"><b>Raw Results</b></div>
+                    <div class="col-md-1">
+                        <span class="btn btn-primary btn-sm " data-toggle="button" aria-pressed="false" id="showHide" value="Toggle" onclick="toggleResult()">Toggle</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-text" style="display:none;" id="result">
+                <div >{{stringify result }}</div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-handlebars-template" id="domains-display">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">
+                <h5>Tenant: {{ tenant_name }}</h5>
+            </div>
+            <h5>Registered Domains</h5>
+            <ul>
+                {{#each domains}}
+                <li>{{ this }}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</script>
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous"></script> -->
+<script type="text/javascript" src="/assets/js/ui.js"></script>
+<script type="text/javascript" src="/assets/js/handlebarHelpers.js"></script>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 My Blog. All rights reserved.</p>
+    <p class="footer-description">A responsive blog built with Jekyll</p>
+  </div>
+</footer>
+
+</body>
+</html>

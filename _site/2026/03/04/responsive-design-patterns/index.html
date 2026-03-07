@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Patterns for Modern Blogs | My Blog</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="My Blog" />
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Responsive Design Patterns for Modern Blogs | My Blog</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Responsive Design Patterns for Modern Blogs" />
+<meta name="author" content="Alex Chen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Responsive design is no longer optional — over half of web traffic comes from mobile devices. A blog that’s hard to read on a phone loses readers immediately. Let’s look at the key patterns that make responsive design work." />
+<meta property="og:description" content="Responsive design is no longer optional — over half of web traffic comes from mobile devices. A blog that’s hard to read on a phone loses readers immediately. Let’s look at the key patterns that make responsive design work." />
+<link rel="canonical" href="http://localhost:4000/2026/03/04/responsive-design-patterns/" />
+<meta property="og:url" content="http://localhost:4000/2026/03/04/responsive-design-patterns/" />
+<meta property="og:site_name" content="My Blog" />
+<meta property="og:image" content="http://localhost:4000/assets/images/responsive-design.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/responsive-design.svg" />
+<meta property="twitter:title" content="Responsive Design Patterns for Modern Blogs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alex Chen"},"dateModified":"2026-03-04T00:00:00+00:00","datePublished":"2026-03-04T00:00:00+00:00","description":"Responsive design is no longer optional — over half of web traffic comes from mobile devices. A blog that’s hard to read on a phone loses readers immediately. Let’s look at the key patterns that make responsive design work.","headline":"Responsive Design Patterns for Modern Blogs","image":"http://localhost:4000/assets/images/responsive-design.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2026/03/04/responsive-design-patterns/"},"url":"http://localhost:4000/2026/03/04/responsive-design-patterns/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="site-logo">My Blog</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      
+        
+      
+        
+          <li><a href="/tenant-tracker/">Tenant Tracker</a></li>
+        
+      
+        
+      
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  });
+</script>
+
+
+  <main class="site-content">
+    <article class="post">
+  
+  <div class="post-banner">
+    <img src="/assets/images/responsive-design.svg" alt="Responsive Design Patterns for Modern Blogs">
+  </div>
+  
+
+  <header class="post-header">
+    <h1 class="post-title">Responsive Design Patterns for Modern Blogs</h1>
+    <div class="post-meta">
+      
+        <span class="post-author">By Alex Chen</span>
+      
+      <time class="post-date" datetime="2026-03-04T00:00:00+00:00">
+        March 4, 2026
+      </time>
+    </div>
+    
+    <p class="post-summary">Explore CSS techniques that make your blog look great on every device, from widescreen monitors to compact phones.</p>
+    
+  </header>
+
+  <div class="post-content">
+    <p>Responsive design is no longer optional — over half of web traffic comes from mobile devices. A blog that’s hard to read on a phone loses readers immediately. Let’s look at the key patterns that make responsive design work.</p>
+
+<h2 id="the-mobile-first-approach">The Mobile-First Approach</h2>
+
+<p>Start with the smallest screen and add complexity for larger ones. This ensures your content is always accessible:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* Base styles — mobile first */</span>
+<span class="nc">.post-grid</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">grid</span><span class="p">;</span>
+  <span class="nl">grid-template-columns</span><span class="p">:</span> <span class="m">1fr</span><span class="p">;</span>
+  <span class="nl">gap</span><span class="p">:</span> <span class="m">1.2rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Wider screens get multi-column layouts */</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">768px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.post-grid</span> <span class="p">{</span>
+    <span class="nl">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="nb">auto-fill</span><span class="p">,</span> <span class="nf">minmax</span><span class="p">(</span><span class="m">340px</span><span class="p">,</span> <span class="m">1fr</span><span class="p">));</span>
+    <span class="nl">gap</span><span class="p">:</span> <span class="m">1.8rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="flexible-images">Flexible Images</h2>
+
+<p>Images should never overflow their containers. A simple rule handles this:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>For banner images, use <code class="language-plaintext highlighter-rouge">object-fit</code> to maintain aspect ratio without distortion:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.post-banner</span> <span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">object-fit</span><span class="p">:</span> <span class="nb">cover</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="typography-that-scales">Typography That Scales</h2>
+
+<p>Readable text is the foundation of any blog. Here are the key principles:</p>
+
+<ul>
+  <li><strong>Line height</strong>: Use <code class="language-plaintext highlighter-rouge">1.7</code> or higher for body text</li>
+  <li><strong>Font size</strong>: <code class="language-plaintext highlighter-rouge">16px</code> minimum on mobile, <code class="language-plaintext highlighter-rouge">18px</code> on desktop</li>
+  <li><strong>Line length</strong>: Keep lines under 75 characters for comfortable reading</li>
+  <li><strong>Contrast</strong>: Ensure sufficient contrast between text and background</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">:root</span> <span class="p">{</span>
+  <span class="py">--content-width</span><span class="p">:</span> <span class="m">760px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.post-content</span> <span class="p">{</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="l">--content-width</span><span class="p">);</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.05rem</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.8</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="handling-code-on-small-screens">Handling Code on Small Screens</h3>
+
+<p>Code blocks need special attention on mobile. They should scroll horizontally rather than wrapping awkwardly:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">pre</span> <span class="p">{</span>
+  <span class="nl">overflow-x</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">-webkit-overflow-scrolling</span><span class="p">:</span> <span class="n">touch</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">480px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.post-content</span> <span class="nt">pre</span> <span class="p">{</span>
+    <span class="nl">margin-left</span><span class="p">:</span> <span class="m">-1rem</span><span class="p">;</span>
+    <span class="nl">margin-right</span><span class="p">:</span> <span class="m">-1rem</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This technique lets code blocks extend to the screen edges on small devices, maximizing the readable width.</p>
+
+<h2 id="testing-your-responsive-design">Testing Your Responsive Design</h2>
+
+<p>Always test on real devices when possible. Browser dev tools are helpful but don’t catch everything:</p>
+
+<ol>
+  <li><strong>Chrome DevTools</strong> — toggle the device toolbar with <code class="language-plaintext highlighter-rouge">Ctrl+Shift+M</code></li>
+  <li><strong>Real phones</strong> — test on both iOS Safari and Android Chrome</li>
+  <li><strong>Slow connections</strong> — throttle your network to simulate 3G</li>
+</ol>
+
+<blockquote>
+  <p>Remember: responsive design isn’t just about screen size. It’s about creating an experience that works for everyone, regardless of how they access your content.</p>
+</blockquote>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>A responsive blog respects your readers’ time and attention. By starting mobile-first, using flexible layouts, and paying attention to typography, you create a reading experience that works beautifully everywhere.</p>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2026 My Blog. All rights reserved.</p>
+    <p class="footer-description">A responsive blog built with Jekyll</p>
+  </div>
+</footer>
+
+</body>
+</html>
