@@ -1,0 +1,53 @@
+{% assign featured = include.posts %}
+{% if featured.size > 0 %}
+<div class="featured-posts">
+  {% assign hero = featured[0] %}
+  <a href="{{ hero.url | relative_url }}" class="featured-hero">
+    {% if hero.image %}
+    <div class="featured-hero-image">
+      <img src="{{ hero.image | relative_url }}" alt="{{ hero.title }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="featured-hero-overlay">
+      <div class="featured-hero-content">
+        <span class="featured-label">// featured</span>
+        {% if hero.tags.size > 0 %}
+        <span class="post-card-tag">{{ hero.tags[0] }}</span>
+        {% endif %}
+        <h2 class="featured-hero-title">{{ hero.title }}</h2>
+        <div class="post-card-meta">
+          {% if hero.author %}<span>{{ hero.author }}</span> &middot; {% endif %}
+          <time datetime="{{ hero.date | date_to_xmlschema }}">{{ hero.date | date: "%B %-d, %Y" }}</time>
+        </div>
+        {% if hero.summary %}
+        <p class="featured-hero-summary">{{ hero.summary }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+
+  {% if featured.size > 1 %}
+  <div class="featured-secondary">
+    {% for post in featured offset:1 %}
+    <a href="{{ post.url | relative_url }}" class="featured-secondary-item">
+      {% if post.image %}
+      <div class="featured-secondary-image">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+      </div>
+      {% endif %}
+      <div class="featured-secondary-body">
+        {% if post.tags.size > 0 %}
+        <span class="post-card-tag">{{ post.tags[0] }}</span>
+        {% endif %}
+        <h3 class="featured-secondary-title">{{ post.title }}</h3>
+        <div class="post-card-meta">
+          {% if post.author %}<span>{{ post.author }}</span> &middot; {% endif %}
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endif %}

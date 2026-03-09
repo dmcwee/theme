@@ -8,20 +8,54 @@
 }
 
 :root {
-  --color-bg: #ffffff;
-  --color-text: #2d3436;
-  --color-text-light: #636e72;
-  --color-primary: #0984e3;
-  --color-primary-dark: #0768b5;
-  --color-border: #dfe6e9;
-  --color-code-bg: #f8f9fa;
-  --color-code-border: #e1e4e8;
-  --color-card-shadow: rgba(0, 0, 0, 0.06);
-  --color-banner-overlay: rgba(0, 0, 0, 0.25);
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "SFMono-Regular", "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --color-bg: #0a0e17;
+  --color-bg-elevated: #111827;
+  --color-bg-card: #141c2b;
+  --color-text: #e2e8f0;
+  --color-text-light: #8b95a5;
+  --color-primary: #00ff88;
+  --color-primary-dark: #00cc6a;
+  --color-primary-glow: rgba(0, 255, 136, 0.15);
+  --color-accent: #00b4d8;
+  --color-border: #1e293b;
+  --color-border-glow: rgba(0, 255, 136, 0.2);
+  --color-code-bg: #0d1321;
+  --color-code-border: #1e293b;
+  --color-card-shadow: rgba(0, 0, 0, 0.3);
+  --color-banner-overlay: rgba(10, 14, 23, 0.6);
+  --color-pre-bg: #0a0f1a;
+  --color-pre-text: #c9d1d9;
+  --color-pre-shadow: rgba(0, 0, 0, 0.4);
+  --color-header-shadow: rgba(0, 0, 0, 0.4);
+  --color-selection: rgba(0, 255, 136, 0.25);
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Fira Code", "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "DejaVu Sans Mono", monospace;
   --max-width: 1200px;
   --content-width: 760px;
+}
+
+[data-theme="light"] {
+  --color-bg: #f0f4f8;
+  --color-bg-elevated: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-text: #1a202c;
+  --color-text-light: #5a6577;
+  --color-primary: #059669;
+  --color-primary-dark: #047857;
+  --color-primary-glow: rgba(5, 150, 105, 0.1);
+  --color-accent: #0284c7;
+  --color-border: #d1d9e6;
+  --color-border-glow: rgba(5, 150, 105, 0.25);
+  --color-code-bg: #edf2f7;
+  --color-code-border: #d1d9e6;
+  --color-card-shadow: rgba(0, 0, 0, 0.06);
+  --color-banner-overlay: rgba(0, 0, 0, 0.2);
+  --color-pre-bg: #1e293b;
+  --color-pre-text: #c9d1d9;
+  --color-pre-shadow: rgba(0, 0, 0, 0.15);
+  --color-header-shadow: rgba(0, 0, 0, 0.08);
+  --color-selection: rgba(5, 150, 105, 0.2);
 }
 
 html {
@@ -36,6 +70,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img {
@@ -52,17 +87,20 @@ a {
 
 a:hover {
   color: var(--color-primary-dark);
+  text-shadow: 0 0 8px var(--color-primary-glow);
 }
 
 /* ==========================================================================
    Header & Navigation
    ========================================================================== */
 .site-header {
-  background: var(--color-bg);
+  background: var(--color-bg-elevated);
   border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 1px 20px var(--color-header-shadow);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-container {
@@ -78,12 +116,20 @@ a:hover {
 .site-logo {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--color-text);
-  letter-spacing: -0.02em;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+.site-logo .logo-bracket {
+  color: var(--color-text-light);
+  font-weight: 400;
 }
 
 .site-logo:hover {
   color: var(--color-primary);
+  text-shadow: 0 0 12px var(--color-primary-glow);
 }
 
 .nav-links {
@@ -94,16 +140,19 @@ a:hover {
 
 .nav-links a {
   color: var(--color-text-light);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  font-family: var(--font-mono);
   padding: 0.25rem 0;
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
+  text-transform: lowercase;
 }
 
 .nav-links a:hover {
   color: var(--color-primary);
   border-bottom-color: var(--color-primary);
+  text-shadow: 0 0 8px var(--color-primary-glow);
 }
 
 .nav-toggle {
@@ -120,7 +169,7 @@ a:hover {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--color-text);
+  background: var(--color-primary);
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.3s;
 }
@@ -138,17 +187,49 @@ a:hover {
 /* ==========================================================================
    Home Page
    ========================================================================== */
+.home-hero {
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 2.5rem;
+}
+
 .home-title {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 800;
+  font-family: var(--font-heading);
   letter-spacing: -0.03em;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-text);
+}
+
+.home-title .highlight {
+  color: var(--color-primary);
 }
 
 .home-description {
   color: var(--color-text-light);
   font-size: 1.15rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
+  max-width: 600px;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
 }
 
 .post-grid {
@@ -161,24 +242,26 @@ a:hover {
 .post-card {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
   box-shadow: 0 2px 8px var(--color-card-shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.3s ease;
   color: var(--color-text);
 }
 
 .post-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 20px var(--color-primary-glow);
+  border-color: var(--color-border-glow);
   color: var(--color-text);
 }
 
 .post-card-image {
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: var(--color-border);
+  background: var(--color-bg-elevated);
 }
 
 .post-card-image img {
@@ -194,6 +277,20 @@ a:hover {
 
 .post-card-body {
   padding: 1.25rem 1.4rem 1.4rem;
+}
+
+.post-card-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-primary);
+  background: var(--color-primary-glow);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  padding: 0.15em 0.6em;
+  border-radius: 3px;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .post-card-title {
@@ -216,8 +313,217 @@ a:hover {
   line-height: 1.55;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ==========================================================================
+   Featured Posts
+   ========================================================================== */
+.featured-posts {
+  margin-bottom: 2.5rem;
+}
+
+.featured-hero {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #ffffff;
+  min-height: 340px;
+  border: 1px solid var(--color-border);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-hero:hover {
+  color: #ffffff;
+  border-color: var(--color-border-glow);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 24px var(--color-primary-glow);
+}
+
+.featured-hero-image {
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg-elevated);
+}
+
+.featured-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.featured-hero:hover .featured-hero-image img {
+  transform: scale(1.03);
+}
+
+.featured-hero-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  min-height: 340px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+  padding: 2rem 2.5rem;
+}
+
+.featured-hero-content {
+  max-width: 640px;
+}
+
+.featured-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.featured-hero-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.featured-hero .post-card-meta {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.featured-hero-summary {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.featured-secondary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.featured-secondary-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  box-shadow: 0 2px 8px var(--color-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  color: var(--color-text);
+}
+
+.featured-secondary-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 16px var(--color-primary-glow);
+  border-color: var(--color-border-glow);
+  color: var(--color-text);
+}
+
+.featured-secondary-image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+}
+
+.featured-secondary-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.featured-secondary-item:hover .featured-secondary-image img {
+  transform: scale(1.04);
+}
+
+.featured-secondary-body {
+  padding: 1rem 1.2rem 1.2rem;
+}
+
+.featured-secondary-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   Post List (vertical)
+   ========================================================================== */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.post-list-item {
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  box-shadow: 0 2px 8px var(--color-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.3s ease;
+  color: var(--color-text);
+}
+
+.post-list-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 0 16px var(--color-primary-glow);
+  border-color: var(--color-border-glow);
+  color: var(--color-text);
+}
+
+.post-list-image {
+  width: 240px;
+  min-height: 140px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+}
+
+.post-list-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.post-list-item:hover .post-list-image img {
+  transform: scale(1.04);
+}
+
+.post-list-body {
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.post-list-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
 }
 
 /* ==========================================================================
@@ -260,7 +566,9 @@ a:hover {
 
 .post-author {
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
 }
 
 .post-summary {
@@ -270,6 +578,9 @@ a:hover {
   border-left: 3px solid var(--color-primary);
   padding-left: 1rem;
   margin-top: 0.5rem;
+  background: var(--color-primary-glow);
+  padding: 1rem 1.2rem;
+  border-radius: 0 6px 6px 0;
 }
 
 /* ==========================================================================
@@ -323,7 +634,7 @@ a:hover {
   padding: 0.6rem 1.2rem;
   margin: 1.5rem 0;
   color: var(--color-text-light);
-  background: var(--color-code-bg);
+  background: var(--color-bg-elevated);
   border-radius: 0 6px 6px 0;
 }
 
@@ -357,8 +668,13 @@ a:hover {
 }
 
 .post-content th {
-  background: var(--color-code-bg);
+  background: var(--color-bg-elevated);
   font-weight: 600;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* ==========================================================================
@@ -375,16 +691,17 @@ a:hover {
 }
 
 .post-content pre {
-  background: #1e1e2e;
-  color: #cdd6f4;
+  background: var(--color-pre-bg);
+  color: var(--color-pre-text);
   padding: 1.2rem 1.4rem;
   border-radius: 8px;
   overflow-x: auto;
   margin: 1.5rem 0;
   font-size: 0.88rem;
   line-height: 1.65;
-  border: 1px solid #313244;
+  border: 1px solid var(--color-border);
   -webkit-overflow-scrolling: touch;
+  box-shadow: inset 0 1px 4px var(--color-pre-shadow);
 }
 
 .post-content pre code {
@@ -442,6 +759,42 @@ a:hover {
 .highlight .err { color: #f38ba8; } /* error — red */
 
 /* ==========================================================================
+   Post Tags
+   ========================================================================== */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ==========================================================================
+   Scrollbar & Selection
+   ========================================================================== */
+::selection {
+  background: var(--color-selection);
+  color: var(--color-text);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-light);
+}
+
+/* ==========================================================================
    Page Layout
    ========================================================================== */
 .page {
@@ -465,10 +818,12 @@ a:hover {
    ========================================================================== */
 .site-footer {
   border-top: 1px solid var(--color-border);
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   text-align: center;
   color: var(--color-text-light);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
+  background: var(--color-bg-elevated);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .footer-container {
@@ -476,8 +831,34 @@ a:hover {
   margin: 0 auto;
 }
 
+.footer-brand {
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
 .footer-description {
   margin-top: 0.3rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: var(--color-text-light);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
 }
 
 /* ==========================================================================
@@ -494,7 +875,7 @@ a:hover {
     top: 64px;
     left: 0;
     right: 0;
-    background: var(--color-bg);
+    background: var(--color-bg-elevated);
     flex-direction: column;
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--color-border);
@@ -509,6 +890,33 @@ a:hover {
   .post-grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
+  }
+
+  .featured-hero {
+    min-height: 260px;
+  }
+
+  .featured-hero-overlay {
+    min-height: 260px;
+    padding: 1.5rem;
+  }
+
+  .featured-hero-title {
+    font-size: 1.4rem;
+  }
+
+  .featured-secondary {
+    grid-template-columns: 1fr;
+  }
+
+  .post-list-item {
+    flex-direction: column;
+  }
+
+  .post-list-image {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
   }
 
   .post-banner {

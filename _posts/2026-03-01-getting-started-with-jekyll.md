@@ -4,6 +4,7 @@ author: "Jane Smith"
 date: 2026-03-01
 image: /assets/images/jekyll-intro.svg
 summary: "Learn how to set up and customize your own Jekyll blog theme with responsive design and beautiful typography."
+tags: [devops]
 ---
 
 If you've been looking for a simple, fast way to create a blog, Jekyll is an excellent choice. It transforms plain text into static websites, which means blazing fast load times and easy hosting on platforms like GitHub Pages.

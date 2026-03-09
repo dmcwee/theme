@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-03-07T14:44:12+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Blog</title><subtitle>A responsive blog built with Jekyll</subtitle><author><name>Blog Author</name></author><entry><title type="html">Syntax Highlighting Done Right</title><link href="http://localhost:4000/2026/03/07/syntax-highlighting-done-right/" rel="alternate" type="text/html" title="Syntax Highlighting Done Right" /><published>2026-03-07T00:00:00+00:00</published><updated>2026-03-07T00:00:00+00:00</updated><id>http://localhost:4000/2026/03/07/syntax-highlighting-done-right</id><content type="html" xml:base="http://localhost:4000/2026/03/07/syntax-highlighting-done-right/"><![CDATA[<p>Code is a first-class citizen in technical blogs. If your readers can’t easily scan and understand code examples, they’ll leave. Here’s how to make embedded code shine.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-03-09T17:41:10+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CyberSec Weekly</title><subtitle>Cybersecurity insights, threat intelligence, and technical deep-dives for security professionals</subtitle><author><name>Security Team</name></author><entry><title type="html">Syntax Highlighting Done Right</title><link href="http://localhost:4000/2026/03/07/syntax-highlighting-done-right/" rel="alternate" type="text/html" title="Syntax Highlighting Done Right" /><published>2026-03-07T00:00:00+00:00</published><updated>2026-03-07T00:00:00+00:00</updated><id>http://localhost:4000/2026/03/07/syntax-highlighting-done-right</id><content type="html" xml:base="http://localhost:4000/2026/03/07/syntax-highlighting-done-right/"><![CDATA[<p>Code is a first-class citizen in technical blogs. If your readers can’t easily scan and understand code examples, they’ll leave. Here’s how to make embedded code shine.</p>
 
 <h2 id="inline-vs-block-code">Inline vs Block Code</h2>
 
@@ -134,7 +134,7 @@
 
 <h2 id="final-thoughts">Final Thoughts</h2>
 
-<p>Good code styling is invisible — readers should focus on the code itself, not the presentation. Keep fonts crisp, colors purposeful, and spacing generous. Your developer readers will thank you.</p>]]></content><author><name>Jane Smith</name></author><summary type="html"><![CDATA[Code is a first-class citizen in technical blogs. If your readers can’t easily scan and understand code examples, they’ll leave. Here’s how to make embedded code shine.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/syntax-highlighting.svg" /><media:content medium="image" url="http://localhost:4000/assets/images/syntax-highlighting.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Responsive Design Patterns for Modern Blogs</title><link href="http://localhost:4000/2026/03/04/responsive-design-patterns/" rel="alternate" type="text/html" title="Responsive Design Patterns for Modern Blogs" /><published>2026-03-04T00:00:00+00:00</published><updated>2026-03-04T00:00:00+00:00</updated><id>http://localhost:4000/2026/03/04/responsive-design-patterns</id><content type="html" xml:base="http://localhost:4000/2026/03/04/responsive-design-patterns/"><![CDATA[<p>Responsive design is no longer optional — over half of web traffic comes from mobile devices. A blog that’s hard to read on a phone loses readers immediately. Let’s look at the key patterns that make responsive design work.</p>
+<p>Good code styling is invisible — readers should focus on the code itself, not the presentation. Keep fonts crisp, colors purposeful, and spacing generous. Your developer readers will thank you.</p>]]></content><author><name>Jane Smith</name></author><category term="tooling" /><summary type="html"><![CDATA[Code is a first-class citizen in technical blogs. If your readers can’t easily scan and understand code examples, they’ll leave. Here’s how to make embedded code shine.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/syntax-highlighting.svg" /><media:content medium="image" url="http://localhost:4000/assets/images/syntax-highlighting.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Responsive Design Patterns for Modern Blogs</title><link href="http://localhost:4000/2026/03/04/responsive-design-patterns/" rel="alternate" type="text/html" title="Responsive Design Patterns for Modern Blogs" /><published>2026-03-04T00:00:00+00:00</published><updated>2026-03-04T00:00:00+00:00</updated><id>http://localhost:4000/2026/03/04/responsive-design-patterns</id><content type="html" xml:base="http://localhost:4000/2026/03/04/responsive-design-patterns/"><![CDATA[<p>Responsive design is no longer optional — over half of web traffic comes from mobile devices. A blog that’s hard to read on a phone loses readers immediately. Let’s look at the key patterns that make responsive design work.</p>
 
 <h2 id="the-mobile-first-approach">The Mobile-First Approach</h2>
 
@@ -236,7 +236,7 @@
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>A responsive blog respects your readers’ time and attention. By starting mobile-first, using flexible layouts, and paying attention to typography, you create a reading experience that works beautifully everywhere.</p>]]></content><author><name>Alex Chen</name></author><summary type="html"><![CDATA[Responsive design is no longer optional — over half of web traffic comes from mobile devices. A blog that’s hard to read on a phone loses readers immediately. Let’s look at the key patterns that make responsive design work.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/responsive-design.svg" /><media:content medium="image" url="http://localhost:4000/assets/images/responsive-design.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Getting Started with Jekyll Themes</title><link href="http://localhost:4000/2026/03/01/getting-started-with-jekyll/" rel="alternate" type="text/html" title="Getting Started with Jekyll Themes" /><published>2026-03-01T00:00:00+00:00</published><updated>2026-03-01T00:00:00+00:00</updated><id>http://localhost:4000/2026/03/01/getting-started-with-jekyll</id><content type="html" xml:base="http://localhost:4000/2026/03/01/getting-started-with-jekyll/"><![CDATA[<p>If you’ve been looking for a simple, fast way to create a blog, Jekyll is an excellent choice. It transforms plain text into static websites, which means blazing fast load times and easy hosting on platforms like GitHub Pages.</p>
+<p>A responsive blog respects your readers’ time and attention. By starting mobile-first, using flexible layouts, and paying attention to typography, you create a reading experience that works beautifully everywhere.</p>]]></content><author><name>Alex Chen</name></author><category term="web-security" /><summary type="html"><![CDATA[Responsive design is no longer optional — over half of web traffic comes from mobile devices. A blog that’s hard to read on a phone loses readers immediately. Let’s look at the key patterns that make responsive design work.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/responsive-design.svg" /><media:content medium="image" url="http://localhost:4000/assets/images/responsive-design.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Getting Started with Jekyll Themes</title><link href="http://localhost:4000/2026/03/01/getting-started-with-jekyll/" rel="alternate" type="text/html" title="Getting Started with Jekyll Themes" /><published>2026-03-01T00:00:00+00:00</published><updated>2026-03-01T00:00:00+00:00</updated><id>http://localhost:4000/2026/03/01/getting-started-with-jekyll</id><content type="html" xml:base="http://localhost:4000/2026/03/01/getting-started-with-jekyll/"><![CDATA[<p>If you’ve been looking for a simple, fast way to create a blog, Jekyll is an excellent choice. It transforms plain text into static websites, which means blazing fast load times and easy hosting on platforms like GitHub Pages.</p>
 
 <h2 id="why-jekyll">Why Jekyll?</h2>
 
@@ -334,73 +334,99 @@ bundle <span class="nb">exec </span>jekyll serve
   <li>Deploying to GitHub Pages</li>
 </ol>
 
-<p>Happy blogging!</p>]]></content><author><name>Jane Smith</name></author><summary type="html"><![CDATA[If you’ve been looking for a simple, fast way to create a blog, Jekyll is an excellent choice. It transforms plain text into static websites, which means blazing fast load times and easy hosting on platforms like GitHub Pages.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jekyll-intro.svg" /><media:content medium="image" url="http://localhost:4000/assets/images/jekyll-intro.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Defender Performance Tuning</title><link href="http://localhost:4000/2026/02/01/defender-performance-tuning/" rel="alternate" type="text/html" title="Defender Performance Tuning" /><published>2026-02-01T00:00:00+00:00</published><updated>2026-02-01T00:00:00+00:00</updated><id>http://localhost:4000/2026/02/01/defender-performance-tuning</id><content type="html" xml:base="http://localhost:4000/2026/02/01/defender-performance-tuning/"><![CDATA[<p>“AV is causing a performance issue…” is the dreaded statement everyone who has deployed an AV and/or EDR tool fears hearing. Sure the system owners should probably do a better job of stating what is needed to minimize impact, but security professionals need to know how to address this? So let’s tune Defender!
+<p>Happy blogging!</p>]]></content><author><name>Jane Smith</name></author><category term="devops" /><summary type="html"><![CDATA[If you’ve been looking for a simple, fast way to create a blog, Jekyll is an excellent choice. It transforms plain text into static websites, which means blazing fast load times and easy hosting on platforms like GitHub Pages.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/jekyll-intro.svg" /><media:content medium="image" url="http://localhost:4000/assets/images/jekyll-intro.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">MDI Learning Periods</title><link href="http://localhost:4000/2022/03/08/mdi-learning-periods/" rel="alternate" type="text/html" title="MDI Learning Periods" /><published>2022-03-08T00:00:00+00:00</published><updated>2022-03-08T00:00:00+00:00</updated><id>http://localhost:4000/2022/03/08/mdi-learning-periods</id><content type="html" xml:base="http://localhost:4000/2022/03/08/mdi-learning-periods/"><![CDATA[<p>MDI alerts have a number of different learning periods, and each is well documented. However, there is not a single list of all the alerts that have learning periods for easy reference, so I have created and will update this list.
 <!--more--></p>
 
-<h2 id="is-it-up-to-date">Is it up to date?</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Alert Category</th>
+      <th>Alert</th>
+      <th>External ID</th>
+      <th>Learning Period</th>
+      <th>Learning Period Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Reconnaissance alerts</td>
+      <td><a href="https://docs.microsoft.com/en-us/defender-for-identity/reconnaissance-alerts#network-mapping-reconnaissance-dns-external-id-2007">Network-mapping reconnaissance (DNS)</a></td>
+      <td>2007</td>
+      <td>8 Days</td>
+      <td>Beginning when the domain controller is becomes monitored</td>
+    </tr>
+    <tr>
+      <td>Lateral Movement</td>
+      <td><a href="https://learn.microsoft.com/en-us/defender-for-identity/lateral-movement-alerts#suspected-over-pass-the-hash-attack-forced-encryption-type-external-id-2008">Suspected over-pass-the-hash attack (forced encryption type)</a></td>
+      <td>2008</td>
+      <td>1 Month</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Domain Dominance Alerts</td>
+      <td><a href="https://docs.microsoft.com/en-us/defender-for-identity/domain-dominance-alerts#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009">Suspected Golden Ticket usage (encryption downgrade)</a></td>
+      <td>2009</td>
+      <td>5 Days</td>
+      <td>From the start of domain controller monitoring</td>
+    </tr>
+    <tr>
+      <td>Reconnaissance alerts</td>
+      <td><a href="https://docs.microsoft.com/en-us/defender-for-identity/reconnaissance-alerts#user-and-group-membership-reconnaissance-samr-external-id-2021">User and Group membership reconnaissance (SAMR)</a></td>
+      <td>2021</td>
+      <td>4 Weeks</td>
+      <td>Per domain controller starting from the first network activity of SAMR against the DC</td>
+    </tr>
+    <tr>
+      <td>Compromised Credential Alerts</td>
+      <td><a href="https://docs.microsoft.com/en-us/defender-for-identity/compromised-credentials-alerts#suspected-brute-force-attack-kerberos-ntlm-external-id-2023">Suspected Brute Force attack (Kerberos, NTLM)</a></td>
+      <td>2023</td>
+      <td>1 Week</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Domain Dominance Alerts</td>
+      <td><a href="https://docs.microsoft.com/en-us/defender-for-identity/domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024">Suspicious additions to sensitive groups</a></td>
+      <td>2024</td>
+      <td>4 Weeks</td>
+      <td>Per Domain Controller starting from the first event</td>
+    </tr>
+    <tr>
+      <td>Compromised Credential Alerts</td>
+      <td><a href="https://docs.microsoft.com/en-us/defender-for-identity/compromised-credentials-alerts#suspicious-vpn-connection-external-id-2025">Suspicious VPN Connection</a></td>
+      <td>2025</td>
+      <td>30 Days</td>
+      <td>From the first VPN connection, and at least 5 VPN connections in the last 30 days, per user</td>
+    </tr>
+    <tr>
+      <td>Reconnaissance alerts</td>
+      <td><a href="https://docs.microsoft.com/en-us/defender-for-identity/reconnaissance-alerts#security-principal-reconnaissance-ldap-external-id-2038">Security principal reconnaissance (LDAP)</a></td>
+      <td>2038</td>
+      <td>15 Days</td>
+      <td>Per computer, starting from the first event, observed from the machine</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>This is alwasy the starting point for any issue you have with a Microsoft product: Update it. Believe it or not Microsoft does release code with performance bugs (I know I’m shocked too…), or you missed a patch for defender but applied a patch to something else and now we have an unexpected situation. Whatever the case may be, having up-to-date Defender Platform, Engine, and Security Intelligence versions may just resolve your issues without the need to read logs.</p>
+<p>You can find a <a href="https://learn.microsoft.com/en-us/defender-for-identity/alerts-overview">complete list of all MDI alerts here</a>.</p>
 
-<h2 id="are-you-sure-its-defender">Are you sure it’s Defender?</h2>
+<p><em>This table was last updated on Aug 29th 2024.</em></p>
+<hr />
 
-<p><strong>“It’s not the Network!”…“It was DNS”</strong></p>
+<p>Aug 29th 2024 Updates:</p>
+<ul>
+  <li>Added Alert <strong>Suspected over-pass-the-hash attack (forced encryption type)</strong> to table.</li>
+</ul>
+<hr />
 
-<p><strong>“It’s not the code!”…“We had to roll back because of a bug”</strong></p>
+<p>Feb 1st 2024 Updates:</p>
+<ul>
+  <li>Re-order based on the External ID value so this will be easier to track against the list of MDI alerts</li>
+  <li>No alerts with learning periods added</li>
+  <li>No learning period changes made</li>
+</ul>
+<hr />
 
-<p>I’m not saying Defender isn’t the performance bottle neck, but we have all seen the <em>new</em> thing get blamed when in reality there are always lots of moving parts in an IT environment.</p>
-
-<p>The beginning point for all troubleshooting should be with and without Defender enabled. Here are the most common components I recommend you disable to start your performance troubleshooting.</p>
-
-<blockquote>
-  <p><strong>Note:</strong> I recommend enabling <em>Troubleshooting mode</em> on the device while you confirm Defender as the cause of performance issues. Troubleshooting mode will allow you to disable the various settings below, but will revert to the originail settings after the troubleshooting time window is over. In addition, if you have tamper protection enabled Troubleshooting mode will allow you to disable tamper protection so you can proceed.</p>
-</blockquote>
-
-<h3 id="real-time-protection">Real Time Protection</h3>
-
-<p>Real time protection monitors activities as they occur on the device, if there are performance issues with Defender is the most likely cause.</p>
-
-<p>As an admin on the device, or from a script in Live Response, you can use this command to disable Real Time Protection.</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-MpPreference</span><span class="w"> </span><span class="nt">-DisableRealtimeMonitoring</span><span class="w"> </span><span class="bp">$true</span><span class="w">
-</span></code></pre></div></div>
-
-<h3 id="behavior-monitoring">Behavior Monitoring</h3>
-
-<p>Behavior monitoring is similar to Real Time Protection in that is continuously monitors activites as they happen on the device. Seldom do you see Behavior monitoring as the root cause for performance issues, but it is not impossible.</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-MpPreference</span><span class="w"> </span><span class="nt">-DisableTamperProtection</span><span class="w"> </span><span class="bp">$true</span><span class="w">
-</span></code></pre></div></div>
-
-<h3 id="network-protection">Network Protection</h3>
-
-<p>Typically Network Protection has more of an impact on servers who are providing resources across the network vs. clients who are retrieving them. However, Network Protection on endpoint could be the cause of some slow load times, so it is another good component to check.</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-MpPreference</span><span class="w"> </span><span class="nt">-EnableNetworkProtection</span><span class="w"> </span><span class="nx">Disabled</span><span class="w">
-</span></code></pre></div></div>
-
-<h2 id="yes-it-is-defender">Yes, it is Defender</h2>
-
-<p>Since you’re up-to-date and aren’t going to leave Real-Time Protection, Network Protection, and Network Monitoring turned off here is how you can now determine the next steps.</p>
-
-<blockquote>
-  <p><strong>Note:</strong> Performance Analyzer does require admin permissions to run.</p>
-</blockquote>
-
-<h3 id="defender-performance-analyzer">Defender Performance Analyzer</h3>
-
-<p>Built into Defender is a performance analyzer designed to make performance troubleshooting easier for you. To troubleshoot you need to enable the performance analyzer, reproduce the issue, and then review the results.</p>
-
-<h4 id="enable-performance-analyzer">Enable Performance Analyzer</h4>
-
-<p>Because performance analyzer is built in enabling it is very easy, but be sure to specify a path you will remember so you can find the etl log.</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">New-MpPerformanceRecording</span><span class="w"> </span><span class="nt">-RecordTo</span><span class="w"> </span><span class="s2">"[path to a file for recording].etl"</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Once Performance Analyzer is running you can now proceed with reproducing the performance issues you have experienced.</p>
-
-<h4 id="analyze-performance-analyzer-results">Analyze Performance Analyzer Results</h4>
-
-<p>After recreating the performance issue, and stopping the recording, its time to analyze the results.</p>
-
-<p>There are lots of options that can be extracted from the performance log, but in general this tool is similar to the Linux <code class="language-plaintext highlighter-rouge">top</code> command to allow you to see what processes and files were most impacted. The two most common are <code class="language-plaintext highlighter-rouge">-TopFiles</code> and <code class="language-plaintext highlighter-rouge">-TopScans</code> which provide insights into processes and files impacted by Defender as well as the period of time impact. This is frequently useful for adding process or path exceptions.</p>]]></content><author><name>Blog Author</name></author><category term="MDE" /><category term="Security" /><category term="MDE" /><category term="Microsoft Defender for Endpoint" /><summary type="html"><![CDATA[“AV is causing a performance issue…” is the dreaded statement everyone who has deployed an AV and/or EDR tool fears hearing. Sure the system owners should probably do a better job of stating what is needed to minimize impact, but security professionals need to know how to address this? So let’s tune Defender! Is it up to date? This is alwasy the starting point for any issue you have with a Microsoft product: Update it. Believe it or not Microsoft does release code with performance bugs (I know I’m shocked too…), or you missed a patch for defender but applied a patch to something else and now we have an unexpected situation. Whatever the case may be, having up-to-date Defender Platform, Engine, and Security Intelligence versions may just resolve your issues without the need to read logs. Are you sure it’s Defender? “It’s not the Network!”…“It was DNS” “It’s not the code!”…“We had to roll back because of a bug” I’m not saying Defender isn’t the performance bottle neck, but we have all seen the new thing get blamed when in reality there are always lots of moving parts in an IT environment. The beginning point for all troubleshooting should be with and without Defender enabled. Here are the most common components I recommend you disable to start your performance troubleshooting. Note: I recommend enabling Troubleshooting mode on the device while you confirm Defender as the cause of performance issues. Troubleshooting mode will allow you to disable the various settings below, but will revert to the originail settings after the troubleshooting time window is over. In addition, if you have tamper protection enabled Troubleshooting mode will allow you to disable tamper protection so you can proceed. Real Time Protection Real time protection monitors activities as they occur on the device, if there are performance issues with Defender is the most likely cause. As an admin on the device, or from a script in Live Response, you can use this command to disable Real Time Protection. Set-MpPreference -DisableRealtimeMonitoring $true Behavior Monitoring Behavior monitoring is similar to Real Time Protection in that is continuously monitors activites as they happen on the device. Seldom do you see Behavior monitoring as the root cause for performance issues, but it is not impossible. Set-MpPreference -DisableTamperProtection $true Network Protection Typically Network Protection has more of an impact on servers who are providing resources across the network vs. clients who are retrieving them. However, Network Protection on endpoint could be the cause of some slow load times, so it is another good component to check. Set-MpPreference -EnableNetworkProtection Disabled Yes, it is Defender Since you’re up-to-date and aren’t going to leave Real-Time Protection, Network Protection, and Network Monitoring turned off here is how you can now determine the next steps. Note: Performance Analyzer does require admin permissions to run. Defender Performance Analyzer Built into Defender is a performance analyzer designed to make performance troubleshooting easier for you. To troubleshoot you need to enable the performance analyzer, reproduce the issue, and then review the results. Enable Performance Analyzer Because performance analyzer is built in enabling it is very easy, but be sure to specify a path you will remember so you can find the etl log. New-MpPerformanceRecording -RecordTo "[path to a file for recording].etl" Once Performance Analyzer is running you can now proceed with reproducing the performance issues you have experienced. Analyze Performance Analyzer Results After recreating the performance issue, and stopping the recording, its time to analyze the results. There are lots of options that can be extracted from the performance log, but in general this tool is similar to the Linux top command to allow you to see what processes and files were most impacted. The two most common are -TopFiles and -TopScans which provide insights into processes and files impacted by Defender as well as the period of time impact. This is frequently useful for adding process or path exceptions.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2026/02/tuning2.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/2026/02/tuning2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>Dec 6th 2023 Updates:</p>
+<ul>
+  <li>Learning period reviewed no changes</li>
+</ul>]]></content><author><name>Security Team</name></author><category term="MDI" /><category term="Identity" /><category term="Microsoft" /><category term="Defender for Identity" /><category term="MDI" /><category term="Microsoft" /><category term="Security" /><category term="Identity" /><summary type="html"><![CDATA[MDI alerts have a number of different learning periods, and each is well documented. However, there is not a single list of all the alerts that have learning periods for easy reference, so I have created and will update this list. Alert Category Alert External ID Learning Period Learning Period Notes Reconnaissance alerts Network-mapping reconnaissance (DNS) 2007 8 Days Beginning when the domain controller is becomes monitored Lateral Movement Suspected over-pass-the-hash attack (forced encryption type) 2008 1 Month   Domain Dominance Alerts Suspected Golden Ticket usage (encryption downgrade) 2009 5 Days From the start of domain controller monitoring Reconnaissance alerts User and Group membership reconnaissance (SAMR) 2021 4 Weeks Per domain controller starting from the first network activity of SAMR against the DC Compromised Credential Alerts Suspected Brute Force attack (Kerberos, NTLM) 2023 1 Week   Domain Dominance Alerts Suspicious additions to sensitive groups 2024 4 Weeks Per Domain Controller starting from the first event Compromised Credential Alerts Suspicious VPN Connection 2025 30 Days From the first VPN connection, and at least 5 VPN connections in the last 30 days, per user Reconnaissance alerts Security principal reconnaissance (LDAP) 2038 15 Days Per computer, starting from the first event, observed from the machine You can find a complete list of all MDI alerts here. This table was last updated on Aug 29th 2024. Aug 29th 2024 Updates: Added Alert Suspected over-pass-the-hash attack (forced encryption type) to table. Feb 1st 2024 Updates: Re-order based on the External ID value so this will be easier to track against the list of MDI alerts No alerts with learning periods added No learning period changes made Dec 6th 2023 Updates: Learning period reviewed no changes]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2022/03/mdi_learning_2.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/2022/03/mdi_learning_2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

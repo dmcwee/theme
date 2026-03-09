@@ -9,10 +9,17 @@ layout: default
   {% endif %}
 
   <header class="post-header">
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <span class="post-card-tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
     <h1 class="post-title">{{ page.title }}</h1>
     <div class="post-meta">
       {% if page.author %}
-        <span class="post-author">By {{ page.author }}</span>
+        <span class="post-author">&gt; {{ page.author }}</span>
       {% endif %}
       <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: "%B %-d, %Y" }}

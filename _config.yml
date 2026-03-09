@@ -1,6 +1,7 @@
-title: My Blog
-description: A responsive blog built with Jekyll
-author: Blog Author
+title: CyberSec Weekly
+description: Cybersecurity insights, threat intelligence, and technical deep-dives for security professionals
+author: Security Team
+theme_mode: light # Options: dark, light
 url: ""
 baseurl: ""
 

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "jeykll-readable-blog-theme"
+  spec.name          = "jekyll-cybersec-theme"
   spec.version       = "0.1.0"
-  spec.authors       = ["Blog Author"]
-  spec.summary       = "A responsive Jekyll blog theme with readable posts and code highlighting"
+  spec.authors       = ["Security Team"]
+  spec.summary       = "A dark, cybersecurity-focused Jekyll blog theme with terminal aesthetics and code highlighting"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f|
     f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i)

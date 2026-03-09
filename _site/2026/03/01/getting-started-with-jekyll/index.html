@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Getting Started with Jekyll Themes | My Blog</title>
+  <title>Getting Started with Jekyll Themes | CyberSec Weekly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="My Blog" />
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="CyberSec Weekly" />
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Getting Started with Jekyll Themes | My Blog</title>
+<title>Getting Started with Jekyll Themes | CyberSec Weekly</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Getting Started with Jekyll Themes" />
 <meta name="author" content="Jane Smith" />
@@ -16,7 +19,7 @@
 <meta property="og:description" content="If you’ve been looking for a simple, fast way to create a blog, Jekyll is an excellent choice. It transforms plain text into static websites, which means blazing fast load times and easy hosting on platforms like GitHub Pages." />
 <link rel="canonical" href="http://localhost:4000/2026/03/01/getting-started-with-jekyll/" />
 <meta property="og:url" content="http://localhost:4000/2026/03/01/getting-started-with-jekyll/" />
-<meta property="og:site_name" content="My Blog" />
+<meta property="og:site_name" content="CyberSec Weekly" />
 <meta property="og:image" content="http://localhost:4000/assets/images/jekyll-intro.svg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2026-03-01T00:00:00+00:00" />
@@ -31,14 +34,10 @@
 <body>
   <header class="site-header">
   <nav class="nav-container">
-    <a href="/" class="site-logo">My Blog</a>
+    <a href="/" class="site-logo"><span class="logo-bracket">[</span>CyberSec Weekly<span class="logo-bracket">]</span></a>
     <ul class="nav-links">
-      <li><a href="/">Home</a></li>
+      <li><a href="/">~/home</a></li>
       
-        
-      
-        
-          <li><a href="/tenant-tracker/">Tenant Tracker</a></li>
         
       
         
@@ -65,10 +64,17 @@
   
 
   <header class="post-header">
+    
+    <div class="post-tags">
+      
+      <span class="post-card-tag">devops</span>
+      
+    </div>
+    
     <h1 class="post-title">Getting Started with Jekyll Themes</h1>
     <div class="post-meta">
       
-        <span class="post-author">By Jane Smith</span>
+        <span class="post-author">&gt; Jane Smith</span>
       
       <time class="post-date" datetime="2026-03-01T00:00:00+00:00">
         March 1, 2026
@@ -187,8 +193,9 @@ bundle <span class="nb">exec </span>jekyll serve
 
   <footer class="site-footer">
   <div class="footer-container">
-    <p>&copy; 2026 My Blog. All rights reserved.</p>
-    <p class="footer-description">A responsive blog built with Jekyll</p>
+    <p class="footer-brand">&gt; CyberSec Weekly</p>
+    <p class="footer-description">Cybersecurity insights, threat intelligence, and technical deep-dives for security professionals</p>
+    <p>&copy; 2026 CyberSec Weekly. All rights reserved.</p>
   </div>
 </footer>
 

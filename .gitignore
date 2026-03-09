@@ -1,0 +1,9 @@
+_site
+_site/
+.jekyll-cache
+.ruby-lsp
+_posts/2022*
+_posts/2023*
+_posts/2024*
+_posts/2025*
+assets/images/*/

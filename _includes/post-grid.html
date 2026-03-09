@@ -1,0 +1,24 @@
+<div class="post-grid">
+  {% for post in include.posts %}
+  <a href="{{ post.url | relative_url }}" class="post-card">
+    {% if post.image %}
+    <div class="post-card-image">
+      <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="post-card-body">
+      {% if post.tags.size > 0 %}
+      <span class="post-card-tag">{{ post.tags[0] }}</span>
+      {% endif %}
+      <h2 class="post-card-title">{{ post.title }}</h2>
+      <div class="post-card-meta">
+        {% if post.author %}<span>{{ post.author }}</span> &middot; {% endif %}
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      </div>
+      {% if post.summary %}
+      <p class="post-card-summary">{{ post.summary }}</p>
+      {% endif %}
+    </div>
+  </a>
+  {% endfor %}
+</div>

@@ -2,28 +2,19 @@
 layout: default
 ---
 <section class="home">
-  <h1 class="home-title">{{ site.title }}</h1>
-  <p class="home-description">{{ site.description }}</p>
-
-  <div class="post-grid">
-    {% for post in site.posts %}
-    <a href="{{ post.url | relative_url }}" class="post-card">
-      {% if post.image %}
-      <div class="post-card-image">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
-      </div>
-      {% endif %}
-      <div class="post-card-body">
-        <h2 class="post-card-title">{{ post.title }}</h2>
-        <div class="post-card-meta">
-          {% if post.author %}<span>{{ post.author }}</span> &middot; {% endif %}
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-        </div>
-        {% if post.summary %}
-        <p class="post-card-summary">{{ post.summary }}</p>
-        {% endif %}
-      </div>
-    </a>
-    {% endfor %}
+  <div class="home-hero">
+    <h1 class="home-title"><span class="highlight">&gt;</span> {{ site.title }}</h1>
+    <p class="home-description">{{ site.description }}</p>
   </div>
+  <div class="section-label">// featured_posts grid</div>
+
+  {% include post-featured.html posts=site.posts %}
+
+  <div class="section-label">// latest_posts grid</div>
+
+  {% include post-grid.html posts=site.posts %}
+
+  <div class="section-label">// latest_posts list</div>
+
+  {% include post-list.html posts=site.posts %}
 </section>

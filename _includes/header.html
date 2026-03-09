@@ -1,11 +1,11 @@
 <header class="site-header">
   <nav class="nav-container">
-    <a href="{{ '/' | relative_url }}" class="site-logo">{{ site.title }}</a>
+    <a href="{{ '/' | relative_url }}" class="site-logo"><span class="logo-bracket">[</span>{{ site.title }}<span class="logo-bracket">]</span></a>
     <ul class="nav-links">
-      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/' | relative_url }}">~/home</a></li>
       {% for page in site.pages %}
         {% if page.title and page.title != "Home" %}
-          <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+          <li><a href="{{ page.url | relative_url }}">~/{{ page.title | downcase }}</a></li>
         {% endif %}
       {% endfor %}
     </ul>
