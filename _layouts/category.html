@@ -1,0 +1,15 @@
+---
+layout: default
+title: Defender for Endpoint
+category: post
+---
+<section class="home">
+  <div class="home-hero">
+    <h1 class="home-title"><span class="highlight">&gt;</span> {{ page.title }}</h1>
+    <p class="home-description">{{ page.description }}</p>
+  </div>
+
+  <div class="section-label">// recent {{ page.category }} posts</div>
+  {% assign catPosts = site.posts | where:"categories",page.category %}
+  {% include post-list.html posts=catPosts %}
+</section>

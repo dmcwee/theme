@@ -21,6 +21,8 @@
         </div>
         {% if hero.summary %}
         <p class="featured-hero-summary">{{ hero.summary }}</p>
+        {% elsif hero.excerpt %}
+      <p class="featured-hero-summary">{{ hero.excerpt }}</p>
         {% endif %}
       </div>
     </div>

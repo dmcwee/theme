@@ -17,6 +17,8 @@
       </div>
       {% if post.summary %}
       <p class="post-card-summary">{{ post.summary }}</p>
+      {% elsif post.excerpt %}
+      <p class="post-card-summary">{{ post.excerpt }}</p>
       {% endif %}
     </div>
   </a>
