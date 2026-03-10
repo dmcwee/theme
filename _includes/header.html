@@ -1,13 +1,31 @@
 <header class="site-header">
   <nav class="nav-container">
-    <a href="{{ '/' | relative_url }}" class="site-logo"><span class="logo-bracket">[</span>{{ site.title }}<span class="logo-bracket">]</span></a>
+    <a href="{{ '/' | relative_url }}" class="site-logo">{{ site.title }}</a>
     <ul class="nav-links">
-      <li><a href="{{ '/' | relative_url }}">~/home</a></li>
-      {% for page in site.pages %}
-        {% if page.title and page.title != "Home" %}
-          <li><a href="{{ page.url | relative_url }}">~/{{ page.title | downcase }}</a></li>
-        {% endif %}
-      {% endfor %}
+      {% if site.data.navigation %}
+        {% for item in site.data.navigation %}
+          {% if item.dropdown %}
+          <li class="nav-item nav-item--has-dropdown">
+            <a href="{{ item.link | default: '#' | relative_url }}" class="nav-link nav-link--parent" aria-haspopup="true" aria-expanded="false">{{ item.name }}<span class="nav-dropdown-caret" aria-hidden="true"></span></a>
+            <ul class="nav-dropdown">
+              {% for child in item.dropdown %}
+              <li><a href="{{ child.link | relative_url }}">{{ child.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% for page in site.pages %}
+          {% if page.title and page.title != "Home" %}
+          <li class="nav-item"><a href="{{ page.url | relative_url }}">{{ page.title | downcase }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
     </ul>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
@@ -15,7 +33,31 @@
   </nav>
 </header>
 <script>
+  // Mobile nav toggle
   document.querySelector('.nav-toggle').addEventListener('click', function() {
     document.querySelector('.nav-links').classList.toggle('open');
+  });
+
+  // Dropdown toggle on click for touch/keyboard
+  document.querySelectorAll('.nav-item--has-dropdown > .nav-link--parent').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var isMobile = window.innerWidth <= 768;
+      if (isMobile) {
+        e.preventDefault();
+        var parent = this.closest('.nav-item--has-dropdown');
+        var expanded = parent.classList.toggle('open');
+        this.setAttribute('aria-expanded', expanded);
+      }
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item--has-dropdown')) {
+      document.querySelectorAll('.nav-item--has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+        el.querySelector('.nav-link--parent').setAttribute('aria-expanded', 'false');
+      });
+    }
   });
 </script>

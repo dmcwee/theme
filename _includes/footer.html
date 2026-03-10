@@ -1,7 +1,23 @@
 <footer class="site-footer">
   <div class="footer-container">
-    <p class="footer-brand">&gt; {{ site.title }}</p>
-    <p class="footer-description">{{ site.description }}</p>
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    <div class="footer-left">
+      <p class="footer-brand">&gt; {{ site.title }}</p>
+      <p class="footer-description">{{ site.description }}</p>
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <ul class="footer-links">
+        {% for social in site.data.socialmedia %}
+        {% if social.url and social.name %}
+        <li>
+          <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.name }}">
+            {% if social.iconclass %}<i class="{{ social.iconclass }}" aria-hidden="true"></i>{% endif %}
+            <!--<span>{{ social.name }}</span>-->
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </footer>

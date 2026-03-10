@@ -27,6 +27,8 @@ layout: default
     </div>
     {% if page.summary %}
     <p class="post-summary">{{ page.summary }}</p>
+    {% elsif page.excerpt %}
+    <p class="post-summary">{{ page.excerpt | strip_html }}</p>
     {% endif %}
   </header>
 

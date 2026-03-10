@@ -12,7 +12,9 @@
       <div class="featured-hero-content">
         <span class="featured-label">// featured</span>
         {% if hero.tags.size > 0 %}
-        <span class="post-card-tag">{{ hero.tags[0] }}</span>
+        {% for tag in hero.tags %}
+        <span class="post-card-tag">{{ tag }}</span>
+        {% endfor %}
         {% endif %}
         <h2 class="featured-hero-title">{{ hero.title }}</h2>
         <div class="post-card-meta">
@@ -22,7 +24,7 @@
         {% if hero.summary %}
         <p class="featured-hero-summary">{{ hero.summary }}</p>
         {% elsif hero.excerpt %}
-      <p class="featured-hero-summary">{{ hero.excerpt }}</p>
+      <p class="featured-hero-summary">{{ hero.excerpt | strip_html }}</p>
         {% endif %}
       </div>
     </div>
@@ -39,7 +41,9 @@
       {% endif %}
       <div class="featured-secondary-body">
         {% if post.tags.size > 0 %}
-        <span class="post-card-tag">{{ post.tags[0] }}</span>
+        {% for tag in post.tags limit:5 %}
+        <span class="post-card-tag">{{ tag }}</span>
+        {% endfor %}
         {% endif %}
         <h3 class="featured-secondary-title">{{ post.title }}</h3>
         <div class="post-card-meta">

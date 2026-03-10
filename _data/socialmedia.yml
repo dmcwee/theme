@@ -1,0 +1,41 @@
+# This file stores the Social media links and sharing information used across the site.
+# By adding/removing items they will be added or removed to the site's top banner. Including a
+# shareurl and settings supportShare to true will cause the sharing link to be added
+# to the 'by line' on posts.
+
+# - name: linkedin
+#   username: YOUR_USERNAME_HERE
+#   iconclass: bi-linkedin
+#   url: "https://www.linkedin.com/in/YOUR_USERNAME_HERE/"
+#   supportShare: false
+#   shareurl: "https://www.linkedin.com/sharing/share-offsite/?url="
+# - name: github
+#   username: YOUR_USERNAME_HERE
+#   iconclass: bi-github
+#   url: "https://github.com/YOUR_USERNAME_HERE"
+# - name: mastodon
+#   username: YOUR_USERNAME_HERE@infosec.exchange
+#   iconclass: bi-mastodon
+#   supportsShare: false
+#   url: "https://infosec.exchange/@YOUR_USERNAME_HERE"
+# - name: threads
+#   username: YOUR_USERNAME_HERE
+#   iconclass: bi-threads-fill
+#   supportsShare: false
+#   url: "https://www.threads.net/@YOUR_USERNAME_HERE"
+# - name: insta
+#   username: YOUR_USERNAME_HERE
+#   iconclass: bi-instagram
+#   supportsShare: false
+#   url: "https://www.instagram.com/YOUR_USERNAME_HERE"
+# - name: bluesky
+#   username: daviYOUR_USERNAME_HERE.com
+#   iconclass: bi-cloud-sun-fill
+#   supportsShare: false
+#   url: "https://bsky.app/profile/daviYOUR_USERNAME_HERE.com"
+#  - name: twitter
+#    username: YOUR_USERNAME_HERE
+#    iconclass: bi-twitter
+#    url: "https://twitter.com/YOUR_USERNAME_HERE"
+#    supportShare: true
+#    shareurl: "https://twitter.com/intent/tweet?url="
