@@ -1,0 +1,12 @@
+<!-- startgoogle analytics -->
+{% assign google_analytics = page.google_analytics | default: site.google_analytics %}
+<!-- Google Analytics: {{ google_analytics }} | page {{ page.google_analytics }} | site {{ site.google_analytics }} -->
+{% if google_analytics and google_analytics != "" %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ google_analytics }}');
+</script>
+<!-- end google analytics-->
