@@ -5,6 +5,8 @@ date: 2026-03-07
 image: /assets/images/syntax-highlighting.svg
 summary: "Make code examples in your blog posts clear and beautiful with proper syntax highlighting and thoughtful styling."
 tags: [tooling]
+series: "Jekyll Mastery"
+series_order: 3
 ---
 
 Code is a first-class citizen in technical blogs. If your readers can't easily scan and understand code examples, they'll leave. Here's how to make embedded code shine.

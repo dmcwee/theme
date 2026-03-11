@@ -987,6 +987,105 @@ a {
 }
 
 /* ==========================================================================
+   Series Navigation
+   ========================================================================== */
+.series-nav {
+  max-width: var(--content-width);
+  margin: 3rem auto 0;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg-card);
+  overflow: hidden;
+}
+
+.series-nav-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.series-nav-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  background: var(--color-primary-glow);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+}
+
+.series-nav-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.series-nav-count {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.series-nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.series-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: var(--color-primary-glow);
+    text-shadow: none;
+  }
+
+  &.series-nav-next {
+    text-align: right;
+    border-left: 1px solid var(--color-border);
+  }
+}
+
+.series-nav-placeholder {
+  display: block;
+}
+
+.series-nav-direction {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.series-nav-link-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+  .series-nav-links {
+    grid-template-columns: 1fr;
+  }
+
+  .series-nav-link.series-nav-next {
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    text-align: left;
+  }
+}
+
+/* ==========================================================================
    Syntax Highlighting — Rouge (Catppuccin Mocha palette)
    ========================================================================== */
 .highlight {
@@ -1446,5 +1545,34 @@ a {
         }
       }
     }
+  }
+}
+
+// ==========================================
+// Footer Nav Links
+// ==========================================
+.footer-nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.75rem 0 0 0;
+  padding: 0;
+
+  a {
+    color: var(--color-text-light);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
   }
 }

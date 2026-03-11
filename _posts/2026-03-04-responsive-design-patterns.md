@@ -5,6 +5,8 @@ date: 2026-03-04
 image: /assets/images/responsive-design.svg
 summary: "Explore CSS techniques that make your blog look great on every device, from widescreen monitors to compact phones."
 tags: [web-security]
+series: "Jekyll Mastery"
+series_order: 2
 ---
 
 Responsive design is no longer optional — over half of web traffic comes from mobile devices. A blog that's hard to read on a phone loses readers immediately. Let's look at the key patterns that make responsive design work.

@@ -18,6 +18,11 @@
         {% endif %}
         {% endfor %}
       </ul>
+      <ul class="footer-nav-links">
+        {% for link in site.data.footerlinks %}
+        <li><a href="{{ link.link }}">{{ link.name }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </footer>

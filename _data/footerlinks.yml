@@ -1,0 +1,9 @@
+# This file stores the navigation text and links for the site. These items are used to
+# create the navigation links in the site's banner.
+#
+# If this file is absent, the nav falls back to Jekyll's auto-discovered pages.
+#
+# Link for in the site footer:
+# - name: About
+#   link: /about
+#
