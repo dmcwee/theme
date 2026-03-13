@@ -28,10 +28,9 @@ layout: default
         <span class="post-update"> | Updated {{ page.last_update | date: "%B %-d, %Y" }}</span>
       {% endif %}
     </div>
-    {% if page.summary %}
-    <p class="post-summary">{{ page.summary }}</p>
-    {% elsif page.excerpt %}
-    <p class="post-summary">{{ page.excerpt | strip_html }}</p>
+    {% assign summary = page.summary | default: page.excerpt | strip_html %}
+    {% if summary %}
+    <p class="post-summary">{{ summary }}</p>
     {% endif %}
   </header>
 
