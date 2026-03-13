@@ -24,6 +24,9 @@ layout: default
       <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
+      {% if page.last_update and page.last_update != page.date %}
+        <span class="post-update"> | Updated {{ page.last_update | date: "%B %-d, %Y" }}</span>
+      {% endif %}
     </div>
     {% if page.summary %}
     <p class="post-summary">{{ page.summary }}</p>
